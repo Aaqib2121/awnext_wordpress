@@ -164,24 +164,31 @@
 </section>
 
 
-    <section class="why-awnext py-5 bg-light">
-        <div class="container text-center">
-            <!-- Local Video -->
-            <div class="video-container">
-                <video controls>
-                    <source src="your-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+<section class="why-awnext py-5 bg-light">
+    <div class="container text-center">
+        <!-- Video Thumbnail -->
+        <div class="video-container" style="position: relative; display: inline-block;">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/video.png" 
+                 alt="Video Thumbnail" 
+                 id="video-thumbnail" 
+                 style="cursor: pointer; width: 100%; max-width: 800px;">
+            
+            <!-- Play Button (Over Thumbnail) -->
+            <div id="play-button" 
+                 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                        width: 80px; height: 80px; background: url('<?php echo get_template_directory_uri(); ?>/img/play-button.png') no-repeat center center;
+                        background-size: contain; cursor: pointer;">
             </div>
-    
-            <!-- YouTube Video (Alternative) -->
-            <!-- <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-                        frameborder="0" allowfullscreen>
-                </iframe>
-            </div> -->
+            
+            <!-- Hidden Video -->
+            <video id="my-video" controls style="display: none; width: 100%; max-width: 800px;">
+                <source src="your-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Stats Section -->
     <section class="stats py-5" id="advantage">
@@ -261,7 +268,7 @@
     <section class="contact py-5 gradient-blue text-white">
         <div class="container">
             <h2 class="text-center mb-4 pt-4 contact_head fw-bold">Get in touch with us!</h2>
-            <h4 class="text-center pb-4">We should start the conversation</h4>
+            <h4 class="text-center text-white pb-4">We should start the conversation</h4>
 
             <div class="text-center mb-5">
                 <button class="btn btn-primary btn-lg">Book a call with us!</button>
@@ -271,7 +278,7 @@
 
             <div class="row mt-5">
                 <div class="col-md-6">
-                    <h3 style="font-size: 52px;font-weight: 400;line-height: 52px;text-align: left;">Contact Us</h3>
+                    <h3 class="text-white" style="font-size: 52px;font-weight: 400;line-height: 52px;text-align: left;">Contact Us</h3>
                     <address class="mt-4">
                         <p>
                             <i class="fas fa-map-marker-alt"></i>
