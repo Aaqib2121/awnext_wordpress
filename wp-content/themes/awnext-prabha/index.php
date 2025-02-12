@@ -297,7 +297,7 @@
             <h4 class="text-center text-white pb-4">We should start the conversation</h4>
 
             <div class="text-center mb-5">
-                <button class="btn btn-primary btn-lg">Book a call with us!</button>
+                <button class="btn btn-primary call-btn btn-lg">Book a call with us!</button>
             </div>
 
             <!-- <hr class="my-3" style="background-color: rgba(255, 255, 255, 0.8); border: none; height: 2px;"> -->

@@ -646,11 +646,6 @@ p {
   .download-form {
     padding: 1rem;
   }
-
-  .btn-primary {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
 }
 
 
@@ -687,17 +682,26 @@ h4 {
 }
 
 .btn-primary {
-  background: var(--gradient-primary);
-  /* Ensure gradient-primary is defined */
+  background: linear-gradient(116.01deg, #0081FF -1.98%, #0272E6 0.58%, #065CC0 5.72%, #09489E 11.7%, #0C3781 17.69%, #0E2A6A 24.53%, #101F58 32.23%, #12184C 41.64%, #121445 54.47%, #131343 83.55%);
   border: none;
   padding: 0.75rem 2rem;
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  width: 40%;
-  /* Set width to 40% for desktop */
+  width: 50%;
   max-width: 300px;
-  /* Limit maximum width */
+}
+
+.call-btn{
+    background: linear-gradient(94.11deg, #0080FF -3.32%, #ADD6FF 6.77%, #43A1FF 80.38%, #0080FF 104.52%);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    width: 50%;
+    max-width: 270px;
+    margin-bottom: 2rem;
 }
 
 hr {
@@ -746,7 +750,6 @@ address p {
 
   .btn-primary {
     width: 60%;
-    /* Adjust width for tablets */
   }
 
   .row {
@@ -779,7 +782,7 @@ address p {
   }
 
   .btn-primary {
-    width: 80%;
+    width: 40%;
     /* Adjust width for mobile */
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
