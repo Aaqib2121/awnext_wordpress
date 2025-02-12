@@ -116,7 +116,7 @@
                                     <img src="<?php echo get_template_directory_uri(); ?>/img/india_map.png"
                                         alt="Pan India Coverage">
                                 </div>
-                                <h3 class="text-dark feature-card">Pan-India’s first motorized awning manufacturer</h3>
+                                <h3 class="text-dark">Pan-India’s first motorized awning manufacturer</h3>
                                 <p>As India’s first OEM awning brand, we deliver premium motorized retractable awnings
                                     to Mumbai, Pune, and nationwide.</p>
                             </div>
