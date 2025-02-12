@@ -57,21 +57,23 @@
                         <div class="banner-form mx-auto">
                             <div class="form-card">
                                 <h2 class="mb-3 text-white">Upgrade to Smart Awning Solutions</h3>
-                                    <h4 class="mb-4 text-white">Smart, smooth, and silent—experience Awnext today!</h5>
-                                        <form>
-                                            <div class="mb-3">
-                                                <input type="text" class="form-control" placeholder="Full Name *"
-                                                    required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <input type="email" class="form-control" placeholder="Email" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <input type="tel" class="form-control" placeholder="Phone Number*"
-                                                    required>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary w-80">Download</button>
-                                        </form>
+                                <h4 class="mb-4 text-white">Smart, smooth, and silent—experience Awnext today!</h5>
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Full Name *"
+                                            required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control" placeholder="Email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="tel" class="form-control" placeholder="Phone Number*"
+                                            required>
+                                    </div>
+                                    <div class="button-container pt-3">
+                                        <button type="submit" class="btn btn-primary">Download</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -105,7 +107,7 @@
     <!-- Features Section -->
     <section class="features py-5" id="why">
         <div class="container">
-            <h2 class="features_head text-center mb-5">Why Awnext by Prabha?</h2>
+            <h2 class="features_head text-left mb-5">Why Awnext by Prabha?</h2>
             <div class="row g-4 justify-content-center">
                 <!-- Feature Cards -->
                 <div class="col-12 col-sm-6 col-xl-3">
@@ -116,7 +118,7 @@
                                     <img src="<?php echo get_template_directory_uri(); ?>/img/india_map.png"
                                         alt="Pan India Coverage">
                                 </div>
-                                <h3 class="text-dark">Pan-India’s first motorized awning manufacturer</h3>
+                                <h3 class="text-dark feature_h3">Pan-India’s first motorized awning manufacturer</h3>
                                 <p>As India’s first OEM awning brand, we deliver premium motorized retractable awnings
                                     to Mumbai, Pune, and nationwide.</p>
                             </div>
@@ -132,7 +134,7 @@
                                     <img src="<?php echo get_template_directory_uri(); ?>/img/luxury_meet.png"
                                         alt="Luxury Meets Affordability">
                                 </div>
-                                <h3 class="text-dark">Luxury Meets Affordability</h3>
+                                <h3 class="text-dark feature_h3">Luxury Meets Affordability</h3>
                                 <p>Premium features at manual prices:</p>
                                 <ul>
                                     <li>Smart remote-controlled operation</li>
@@ -152,7 +154,7 @@
                                     <img src="<?php echo get_template_directory_uri(); ?>/img/cust_space.png"
                                         alt="Customizable for Your Space">
                                 </div>
-                                <h3 class="text-dark">Customizable for Your Space</h3>
+                                <h3 class="text-dark feature_h3">Customizable for Your Space</h3>
                                 <p>Design awnings tailored to your exact needs:</p>
                                 <ul>
                                     <li>Size, color, and fabric customization</li>
@@ -171,7 +173,7 @@
                                     <img src="<?php echo get_template_directory_uri(); ?>/img/support-icon.png"
                                         alt="Exceptional Customer Support">
                                 </div>
-                                <h3 class="text-dark">Exceptional Customer Support</h3>
+                                <h3 class="text-dark feature_h3">Exceptional Customer Support</h3>
                                 <p>Our dedicated support team ensures a seamless experience from consultation to
                                     installation and beyond.</p>
                             </div>
@@ -209,16 +211,16 @@
     <!-- Stats Section -->
     <section class="stats py-5" id="advantage">
         <div class="container">
-            <h2 class="stats_head">The Prabha Advantage</h2>
-            <p class="lead mb-5 pt-4">Partnering with Prabha Engineering means decades of innovation, reliability, and a
+            <h2 class="stats_head text-left">The Prabha Advantage</h2>
+            <p class="lead mb-5 pt-4 text-left">Partnering with Prabha Engineering means decades of innovation, reliability, and a
                 trusted ally for your success.</p>
 
             <!-- Row for Stats -->
-            <div class="row text-center stat-row">
+            <div class="row text-left stat-row">
                 <!-- Column 1 -->
                 <div class="col-md-3 col-6 stat-box">
                     <div class="stat-item">
-                        <div class="stat-number" data-target="400">0</div>
+                        <div class="stat-number" data-target="400+">0</div>
                         <div class="stat-line"></div>
                         <div class="stat-label">
                             <h5>Lifetime Customers</h5>
@@ -228,7 +230,7 @@
                 <!-- Column 2 -->
                 <div class="col-md-3 col-6 stat-box">
                     <div class="stat-item">
-                        <div class="stat-number" data-target="60">0</div>
+                        <div class="stat-number" data-target="60+">0</div>
                         <div class="stat-line"></div>
                         <div class="stat-label">
                             <h5>Years of experience<br>in innovations</h5>
@@ -238,7 +240,7 @@
                 <!-- Column 3 -->
                 <div class="col-md-3 col-6 stat-box">
                     <div class="stat-item">
-                        <div class="stat-number" data-target="200">0</div>
+                        <div class="stat-number" data-target="200+">0</div>
                         <div class="stat-line"></div>
                         <div class="stat-label">
                             <h5>Product Portfolio</h5>
@@ -248,7 +250,7 @@
                 <!-- Column 4 -->
                 <div class="col-md-3 col-6 stat-box">
                     <div class="stat-item">
-                        <div class="stat-number" data-target="87">0</div>
+                        <div class="stat-number" data-target="87%">0</div>
                         <div class="stat-line"></div>
                         <div class="stat-label">
                             <h5>Client Retention<br>Rate</h5>
@@ -264,13 +266,13 @@
         style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/download_sec.png'); background-size: cover; background-position: center; height: 70vh; width: 100%;">
         <div class="image-overlay">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row align-items-center download-row">
                     <div class="col-lg-6">
-                        <h2 class="text-white fw-bold download_text">Download our brochure to get more insights</h2>
+                        <h2 class="text-white fw-bold download_text">Download our brochure <br> to get more insights</h2>
                     </div>
                     <div class="col-lg-4 mx-auto">
                         <div class="download-form">
-                            <h3 class="mb-3 pb-4 text-white fw-bold">Download our brochure</h3>
+                            <h3 class="mb-3 pb-3 text-white fw-bold">Download our brochure</h3>
                             <form>
                                 <div class="mb-3">
                                     <input type="text" class="form-control" placeholder="Full Name *" required>
@@ -281,7 +283,9 @@
                                 <div class="mb-3">
                                     <input type="tel" class="form-control" placeholder="Phone Number*" required>
                                 </div>
-                                <button type="submit" class="btn btn-primary w-70">Download</button>
+                                <div class="button-container pt-3">
+                                    <button type="submit" class="btn btn-primary">Download</button>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -297,7 +301,7 @@
             <h4 class="text-center text-white pb-4">We should start the conversation</h4>
 
             <div class="text-center mb-5">
-                <button class="btn btn-primary call-btn btn-lg">Book a call with us!</button>
+                <a href="tel:9226566851" class="btn btn-lg call-btn">Book a call with us!</a>
             </div>
 
             <!-- <hr class="my-3" style="background-color: rgba(255, 255, 255, 0.8); border: none; height: 2px;"> -->
@@ -308,16 +312,20 @@
                         Contact Us</h3>
                     <address class="mt-4">
                         <p>
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-map-marker-alt p-2"></i>
                             Gate No. 519, Mulshi Road, Rihe Rd, Shelkewadi, Ghotawade, Pune, Maharashtra 412111
                         </p>
-                        <p>
-                            <i class="fas fa-envelope"></i>
-                            nandkishore@prabha-engg.com
+                        <p class="email-address">
+                            <a href="mailto:nandkishore@prabha-engg.com" class="email-link">
+                                <i class="fas fa-envelope p-2"></i>
+                                nandkishore@prabha-engg.com
+                            </a>
                         </p>
-                        <p>
-                            <i class="fas fa-phone"></i>
-                            92265 66851
+                        <p class="phone-number">
+                            <a href="tel:9226566851" class="phone-link">
+                                <i class="fas fa-phone p-2"></i>
+                                92265 66851
+                            </a>
                         </p>
                     </address>
                 </div>

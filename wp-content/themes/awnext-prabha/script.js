@@ -12,15 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const statNumbers = document.querySelectorAll('.stat-number');
-
     const options = {
-        threshold: 0.5
+        threshold: 0.5 // Trigger when 50% of the element is visible
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const target = +entry.target.getAttribute('data-target');
+                const target = entry.target.getAttribute('data-target');
                 animateNumber(entry.target, target);
                 observer.unobserve(entry.target);
             }
@@ -33,12 +32,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function animateNumber(element, target) {
         let current = 0;
-        const increment = target / 100;
+        const isPercentage = target.includes('%'); // Check if the target is a percentage
+        const isPlusSign = target.includes('+'); // Check if the target has a + sign
+        const targetNumber = parseFloat(target); // Extract the numeric value
+        const increment = targetNumber / 100;
         const interval = setInterval(() => {
             current += increment;
-            if (current >= target) {
+            if (current >= targetNumber) {
                 clearInterval(interval);
-                current = target;
+                current = targetNumber;
 
                 // Add a class to the stat-line after animation completes
                 const statLine = element.nextElementSibling; // Assuming stat-line is the next sibling
@@ -46,7 +48,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     statLine.classList.add('show-line');
                 }
             }
-            element.textContent = Math.floor(current);
+            // Add % or + sign based on the target
+            if (isPercentage) {
+                element.textContent = `${Math.floor(current)}%`;
+            } else if (isPlusSign) {
+                element.textContent = `${Math.floor(current)}+`;
+            } else {
+                element.textContent = Math.floor(current);
+            }
         }, 20);
     }
 });

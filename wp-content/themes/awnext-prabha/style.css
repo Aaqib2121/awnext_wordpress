@@ -113,9 +113,9 @@ p {
   align-items: center;
 }
 
-/* .hero_h1{
-  font-size: 3.4rem;
-} */
+.hero_h1{
+  font-size: 3.2rem;
+}
 
 .hero::before {
   content: "";
@@ -144,7 +144,7 @@ p {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  text-align: left;
   margin-top: 4rem;
 }
 
@@ -170,6 +170,7 @@ p {
 
   .hero_h1 {
     padding-top: 2em;
+    font-size: 2rem;
   }
 
   .banner-form {
@@ -325,22 +326,27 @@ p {
 
 /* Features Section */
 .features {
-  background: #daf0ff;
+  /* background: #daf0ff; */
+  background: rgba(218, 240, 255, 1);
 }
 
 .features_head {
   font-size: 52px;
   font-weight: 400;
-  text-align: center;
+  /* text-align: center; */
   line-height: 1.2;
   margin-bottom: 2rem;
+}
+
+.feature_h3{
+  font-weight: 600;
 }
 
 .feature-card {
   border: 1px solid #ddd;
   padding: 0;
   height: 100%;
-  background-color: #fff;
+  background: linear-gradient(156.39deg, #2EA1FD -8.77%, rgba(218, 240, 255, 0) 53.46%, #2EA1FD 108.38%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -351,8 +357,8 @@ p {
 
 /* Icons aligned to the left */
 .feature-icon {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -480,15 +486,18 @@ p {
 
 .stats_head {
   font-size: 52px;
-  text-align: center;
-  /* font-size: 2.5rem; */
   margin-bottom: 1rem;
 }
 
 .lead {
-  text-align: center;
+  /* text-align: center; */
   font-size: 1.25rem;
   color: #555;
+}
+
+.stat-box{
+  text-align: left;
+  justify-items: left;
 }
 
 .stat-item {
@@ -515,7 +524,7 @@ p {
 .stat-label h5 {
   font-size: 1.25rem;
   color: #333;
-  margin: 0;
+  /* margin: 0; */
 }
 
 /* Responsive Styles */
@@ -583,14 +592,13 @@ p {
       #2ea1fd 108.38%);
   padding: 2rem;
   border-radius: 8px;
-  text-align: center;
-  width: 100%;
-  max-width: 400px;
-  /* Limit form width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-top: 4rem;
 }
 
 .download_text {
-  font-size: 2rem;
+  font-size: 2.8rem;
   font-weight: 400;
   line-height: 1.5;
   text-align: left;
@@ -607,6 +615,13 @@ p {
   font-weight: 600;
 }
 
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+
 /* Responsive Styles */
 @media (max-width: 992px) {
   .download {
@@ -619,7 +634,7 @@ p {
     /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0, #000 100%); */
   }
 
-  .row {
+  .download-row {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -627,7 +642,7 @@ p {
 
   .download_text {
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
   }
 
@@ -639,7 +654,7 @@ p {
 
 @media (max-width: 576px) {
   .download_text {
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.3;
   }
 
@@ -692,16 +707,25 @@ h4 {
   max-width: 300px;
 }
 
-.call-btn{
-    background: linear-gradient(94.11deg, #0080FF -3.32%, #ADD6FF 6.77%, #43A1FF 80.38%, #0080FF 104.52%);
-    border: none;
-    padding: 0.75rem 2rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #fff;
-    width: 50%;
-    max-width: 270px;
-    margin-bottom: 2rem;
+.call-btn {
+  background: linear-gradient(94.11deg, #0080FF -3.32%, #ADD6FF 6.77%, #43A1FF 80.38%, #0080FF 104.52%);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  width: 100%; /* Full width for better responsiveness */
+  max-width: 270px; /* Limit max width */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Ensure proper button styling */
+  text-align: center; /* Center text */
+  border-radius: 8px; /* Add rounded corners */
+}
+
+.call-btn:hover {
+  background: linear-gradient(94.11deg, #0066CC -3.32%, #99C2FF 6.77%, #3385FF 80.38%, #0066CC 104.52%);
+  color: #fff;
+  text-decoration: none; /* Ensure no underline on hover */
 }
 
 hr {
@@ -722,11 +746,38 @@ address p {
   line-height: 1.5;
 }
 
+.email-address {
+  gap: 10px; /* Add spacing between icon and text */
+  font-size: 1rem; /* Adjust font size as needed */
+  color: #fff; /* Adjust text color as needed */
+}
+
+.email-link {
+  text-decoration: none; /* Remove underline from link */
+  color: #fff; /* Inherit text color from parent */
+  gap: 10px; /* Add spacing between icon and text */
+}
+
+.email-link i {
+  font-size: 1.2rem; /* Adjust icon size as needed */
+  color: #fff; /* Adjust icon color as needed */
+}
+
+.email-link:hover {
+  color: #fff; /* Change color on hover */
+}
+
+.phone-link {
+  text-decoration: none; 
+  color: inherit;
+  display: flex;
+  align-items: center; 
+  gap: 10px;
+}
+
 .fas {
-  width: 24px;
-  height: 24px;
-  margin-right: 0.5rem;
-  vertical-align: middle;
+  /* width: 24px;
+  height: 24px; */
   color: #fff;
   /* Icon color */
 }
