@@ -19,14 +19,8 @@
                     <div class="logo d-flex align-items-center">
                         <div class="logo-text">
                             <div class="logo-top">
-                                <span>A</span>
-                                <span>W</span>
-                                <span>N</span>
-                                <span>E</span>
-                                <span>X</span>
-                                <span>T</span>
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/nav_logo.png" alt="Company Logo">  <!-- Yahan apna logo image ka path daalein -->
                             </div>
-                            <div class="logo-bottom">by Prabha</div>
                         </div>
                     </div>
                 </a>

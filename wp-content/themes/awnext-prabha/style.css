@@ -83,8 +83,10 @@ p {
   background: linear-gradient(90deg, #0081FF 0%, rgba(19, 19, 67, 0.58) 45.5%, #0081FF 98.8%);
 }
 
-.logo {
-  height: 40px;
+.logo img {
+  height: 50px;
+  width: auto;
+  max-width: 150px;
 }
 
 .logo-text {
@@ -210,6 +212,10 @@ p {
 
   .form-card {
     padding: 0.5rem;
+  }
+
+  .logo img {
+    height: 45px;
   }
 }
 
