@@ -12,7 +12,7 @@
 
 <body>
 
-    <header class="fixed-top">
+<header class="fixed-top">
         <nav class="navbar navbar-expand-lg navbar-dark gradient-primary">
             <div class="container">
                 <a class="navbar-brand" href="#">
@@ -45,23 +45,19 @@
                             <a class="nav-link text-white" href="#advantage">The Prabha Advantage</a>
                         </li>
                     </ul>
-                    <button class="btn btn-outline-light">Get in Touch</button>
+                    <a class="btn btn-outline-light" href="#get_contact">Get in Touch</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="hero d-flex align-items-center">
-            <div class="container">
+            <div class="container hero_conatiner">
                 <div class="row hero_head justify-content-center align-items-center">
-                    <!-- Left Side: Text Content -->
                     <div class="col-lg-6 text-center text-lg-start text-white">
-                        <h1 class="fw-bold">India’s first OEM<br>for motorized awnings</h1>
+                        <h1 class="fw-bold hero_h1">India’s first OEM<br>for motorized awnings</h1>
                     </div>
-
-                    <!-- Right Side: Banner Form -->
                     <div class="col-lg-6">
                         <div class="banner-form mx-auto">
                             <div class="form-card">
@@ -197,7 +193,7 @@
             <p class="lead mb-5 pt-4">Partnering with Prabha Engineering means decades of innovation, reliability, and a trusted ally for your success.</p>
 
             <!-- Row for Stats -->
-            <div class="row text-center">
+            <div class="row text-center stat-row">
                 <!-- Column 1 -->
                 <div class="col-md-3 col-6 stat-box">
                     <div class="stat-item">
@@ -265,7 +261,7 @@
       </section>
 
     <!-- Contact Section -->
-    <section class="contact py-5 gradient-blue text-white">
+    <section class="contact py-5 gradient-blue text-white" id="get_contact">
         <div class="container">
             <h2 class="text-center mb-4 pt-4 contact_head fw-bold">Get in touch with us!</h2>
             <h4 class="text-center text-white pb-4">We should start the conversation</h4>
