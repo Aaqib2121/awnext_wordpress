@@ -83,6 +83,10 @@ p {
   background: linear-gradient(90deg, #0081FF 0%, rgba(19, 19, 67, 0.58) 45.5%, #0081FF 98.8%);
 }
 
+.nav-item {
+  padding-right: 2.4rem;
+}
+
 .logo img {
   height: 50px;
   width: auto;
@@ -320,7 +324,6 @@ p {
 }
 
 /* Features Section */
-.feature-card,
 .features {
   background: #daf0ff;
 }
@@ -328,54 +331,76 @@ p {
 .features_head {
   font-size: 52px;
   font-weight: 400;
-  /* text-align: center; */
+  text-align: center;
   line-height: 1.2;
   margin-bottom: 2rem;
 }
 
 .feature-card {
   border: 1px solid #ddd;
-  padding: 2rem;
+  padding: 0;
   height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  min-height: 100%;
 }
 
-.feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
+/* Icons aligned to the left */
 .feature-icon {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 1.5rem;
-  background-color: #f8f9fa;
-  border-radius: 50%;
+  width: 120px;
+  height: 120px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  /* Left Align */
+  margin: 1rem;
 }
 
-.feature-card ul {
+.feature-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Card Body - Fixed Height, Left Align */
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
   text-align: left;
-  padding-left: 1.5rem;
 }
 
-.feature-card ul li {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 0.5rem;
+/* Card Footer - Fixed at Bottom, Left Align */
+.card-footer {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  padding: 0.75rem;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #00356b;
 }
 
-/* Responsive adjustments */
+/* Responsive Fixes */
 @media (max-width: 768px) {
   .features_head {
     font-size: 40px;
   }
 
   .feature-card {
-    padding: 1.5rem;
+    padding: 0;
+  }
+
+  .feature-icon {
+    width: 70px;
+    height: 70px;
   }
 }
 
@@ -385,7 +410,7 @@ p {
   }
 
   .feature-card {
-    padding: 1rem;
+    padding: 0;
   }
 
   .feature-icon {
