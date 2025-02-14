@@ -353,7 +353,7 @@ p {
 
 .features_head {
   font-size: 52px;
-  font-weight: 600;
+  /* font-weight: 600; */
   text-align: left;
   line-height: 1.2;
   margin-bottom: 3rem;
