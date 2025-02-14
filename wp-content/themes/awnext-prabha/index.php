@@ -19,8 +19,7 @@
                     <div class="logo d-flex align-items-center">
                         <div class="logo-text">
                             <div class="logo-top">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/nav_logo.png"
-                                    alt="Company Logo"> <!-- Yahan apna logo image ka path daalein -->
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/nav_logo.png" alt="Company Logo">
                             </div>
                         </div>
                     </div>
@@ -56,22 +55,21 @@
                     <div class="col-lg-6">
                         <div class="banner-form mx-auto">
                             <div class="form-card">
-                                <h2 class="mb-3 text-white">Upgrade to Smart Awning Solutions</h3>
-                                <h4 class="mb-4 text-white">Smart, smooth, and silent—experience Awnext today!</h5>
-                                <form>
+                                <h2 class="mb-3 text-white">Upgrade to Smart Awning Solutions</h2>
+                                <h4 class="mb-4 text-white">Smart, smooth, and silent—experience Awnext today!</h4>
+                                <form method="post" action="">
+                                    <?php wp_nonce_field('form_submission_nonce', 'form_nonce'); ?>
                                     <div class="mb-3">
-                                        <input type="text" class="form-control" placeholder="Full Name *"
-                                            required>
+                                        <input type="text" class="form-control" name="full_name" placeholder="Full Name *" required>
                                     </div>
                                     <div class="mb-3">
-                                        <input type="email" class="form-control" placeholder="Email" required>
+                                        <input type="email" class="form-control" name="email" placeholder="Email *" required>
                                     </div>
                                     <div class="mb-3">
-                                        <input type="tel" class="form-control" placeholder="Phone Number*"
-                                            required>
+                                        <input type="tel" class="form-control" name="phone_number" placeholder="Phone Number *" required>
                                     </div>
                                     <div class="button-container pt-3">
-                                        <button type="submit" class="btn btn-primary">Download</button>
+                                        <button type="submit" name="submit" class="btn btn-primary">Download</button>
                                     </div>
                                 </form>
                             </div>
@@ -104,87 +102,95 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features py-5" id="why">
-        <div class="container">
-            <h2 class="features_head text-left mb-5">Why Awnext by Prabha?</h2>
-            <div class="row g-4 justify-content-center">
-                <!-- Feature Cards -->
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card feature-card shadow-sm">
-                        <div class="card-body">
-                            <div class="feature-header">
-                                <div class="feature-icon">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/india_map.png"
-                                        alt="Pan India Coverage">
-                                </div>
-                                <h3 class="text-dark feature_h3">Pan-India’s first motorized awning manufacturer</h3>
-                                <p>As India’s first OEM awning brand, we deliver premium motorized retractable awnings
-                                    to Mumbai, Pune, and nationwide.</p>
+
+<!-- Features Section -->
+<section class="features py-5" id="why">
+    <div class="container">
+        <h2 class="features_head text-left mb-5">Why Awnext by Prabha?</h2>
+        <div class="row flex-nowrap overflow-auto g-4 pb-3 scrollable-row"> <!-- Added scrollable-row class -->
+            <!-- Feature Cards -->
+            <div class="col-12 col-sm-6 col-xl-3 flex-shrink-0">
+                <div class="card feature-card shadow-sm">
+                    <div class="card-body">
+                        <div class="feature-header">
+                            <div class="feature-icon">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/india_map.png" alt="Pan India Coverage">
                             </div>
+                            <h3 class="text-dark feature_h3">Pan-India’s First Motorized Awning Manufacturer</h3>
+                            <p>As India’s first OEM awning brand, we deliver premium motorized retractable awnings to Mumbai, Pune, and nationwide.</p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card feature-card shadow-sm">
-                        <div class="card-body">
-                            <div class="feature-header">
-                                <div class="feature-icon">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/luxury_meet.png"
-                                        alt="Luxury Meets Affordability">
-                                </div>
-                                <h3 class="text-dark feature_h3">Luxury Meets Affordability</h3>
-                                <p>Premium features at manual prices:</p>
-                                <ul>
-                                    <li>Smart remote-controlled operation</li>
-                                    <li>UV-resistant, weatherproof fabrics</li>
-                                    <li>5-year warranty on motors and frames</li>
-                                </ul>
+            <div class="col-12 col-sm-6 col-xl-3 flex-shrink-0">
+                <div class="card feature-card shadow-sm">
+                    <div class="card-body">
+                        <div class="feature-header">
+                            <div class="feature-icon">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/luxury_meet.png" alt="Luxury Meets Affordability">
                             </div>
+                            <h3 class="text-dark feature_h3">Luxury Meets Affordability</h3>
+                            <p>Premium features at manual prices:</p>
+                            <ul>
+                                <li>Smart remote-controlled operation</li>
+                                <li>UV-resistant, weatherproof fabrics</li>
+                                <li>5-year warranty on motors and frames</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card feature-card shadow-sm">
-                        <div class="card-body">
-                            <div class="feature-header">
-                                <div class="feature-icon">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/cust_space.png"
-                                        alt="Customizable for Your Space">
-                                </div>
-                                <h3 class="text-dark feature_h3">Customizable for Your Space</h3>
-                                <p>Design awnings tailored to your exact needs:</p>
-                                <ul>
-                                    <li>Size, color, and fabric customization</li>
-                                    <li>Quick installation for homes, cafés, and commercial spaces</li>
-                                </ul>
+            <div class="col-12 col-sm-6 col-xl-3 flex-shrink-0">
+                <div class="card feature-card shadow-sm">
+                    <div class="card-body">
+                        <div class="feature-header">
+                            <div class="feature-icon">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/cust_space.png" alt="Customizable for Your Space">
                             </div>
+                            <h3 class="text-dark feature_h3">Customizable for Your Space</h3>
+                            <p>Design awnings tailored to your exact needs:</p>
+                            <ul>
+                                <li>Size, color, and fabric customization</li>
+                                <li>Quick installation for homes, cafés, and commercial spaces</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card feature-card shadow-sm">
-                        <div class="card-body">
-                            <div class="feature-header">
-                                <div class="feature-icon">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/support-icon.png"
-                                        alt="Exceptional Customer Support">
-                                </div>
-                                <h3 class="text-dark feature_h3">Exceptional Customer Support</h3>
-                                <p>Our dedicated support team ensures a seamless experience from consultation to
-                                    installation and beyond.</p>
+            <div class="col-12 col-sm-6 col-xl-3 flex-shrink-0">
+                <div class="card feature-card shadow-sm">
+                    <div class="card-body">
+                        <div class="feature-header">
+                            <div class="feature-icon">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/support-icon.png" alt="Exceptional Customer Support">
                             </div>
+                            <h3 class="text-dark feature_h3">Exceptional Customer Support</h3>
+                            <p>Our dedicated support team ensures a seamless experience from consultation to installation and beyond.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sixty-Icon Card -->
+            <div class="col-12 col-sm-6 col-xl-3 flex-shrink-0">
+                <div class="card feature-card shadow-sm">
+                    <div class="card-body">
+                        <div class="feature-header">
+                            <div class="feature-icon">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/sixty-icon.png" alt="60-Day Satisfaction Guarantee">
+                            </div>
+                            <h3 class="text-dark feature_h3">60-Day Satisfaction Guarantee</h3>
+                            <p>We offer a 60-day satisfaction guarantee to ensure you love your awning or your money back.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-
+    </div>
+</section>
 
     <section class="why-awnext py-5 bg-light">
         <div class="container text-center">
@@ -212,7 +218,8 @@
     <section class="stats py-5" id="advantage">
         <div class="container">
             <h2 class="stats_head text-left">The Prabha Advantage</h2>
-            <p class="lead mb-5 pt-4 text-left">Partnering with Prabha Engineering means decades of innovation, reliability, and a
+            <p class="lead mb-5 pt-4 text-left">Partnering with Prabha Engineering means decades of innovation,
+                reliability, and a
                 trusted ally for your success.</p>
 
             <!-- Row for Stats -->
@@ -268,25 +275,28 @@
             <div class="container">
                 <div class="row align-items-center download-row">
                     <div class="col-lg-6">
-                        <h2 class="text-white fw-bold download_text">Download our brochure <br> to get more insights</h2>
+                        <h2 class="text-white fw-bold download_text">Download our brochure <br> to get more insights
+                        </h2>
                     </div>
                     <div class="col-lg-4 mx-auto">
                         <div class="download-form">
                             <h3 class="mb-3 pb-3 text-white fw-bold">Download our brochure</h3>
-                            <form>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Full Name *" required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="email" class="form-control" placeholder="Email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="tel" class="form-control" placeholder="Phone Number*" required>
-                                </div>
-                                <div class="button-container pt-3">
-                                    <button type="submit" class="btn btn-primary">Download</button>
-                                </div>
-                            </form>
+                            <form id="downloadForm" method="post" action="">
+    <?php wp_nonce_field('form_submission_nonce', 'form_nonce'); ?>
+    <div class="mb-3">
+        <input type="text" class="form-control" name="full_name" placeholder="Full Name *" required>
+    </div>
+    <div class="mb-3">
+        <input type="email" class="form-control" name="email" placeholder="Email *" required>
+    </div>
+    <div class="mb-3">
+        <input type="tel" class="form-control" name="phone_number" placeholder="Phone Number *" required>
+    </div>
+    <div class="button-container pt-3">
+        <button type="submit" id="downloadBtn" name="submit" class="btn btn-primary">Download</button>
+    </div>
+</form>
+
                         </div>
                     </div>
                 </div>
@@ -331,8 +341,11 @@
                 </div>
                 <div class="col-md-6">
                     <div class="map-container">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/map.png" class="img-fluid rounded"
-                            alt="Location Map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.3579407107436!2d73.66382957595603!3d18.557894682542955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb580826e04f%3A0x8216f59d75fd3b3c!2sPrabha%20Engineering%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1739443986651!5m2!1sen!2sin"  width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"></iframe>
                     </div>
                 </div>
                 <hr class="my-3 mt-4" style="background-color: white; border: none; height: 2px;">
@@ -347,6 +360,9 @@
 
     <script src="<?php echo get_template_directory_uri(); ?>/assets/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/script.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script> -->
 </body>
 
 </html>
