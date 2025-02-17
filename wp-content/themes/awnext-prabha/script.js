@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Video play button and thumbnail handling
+    // ================== Video Play Button Handling ==================
     const playButton = document.getElementById("play-button");
     const videoThumbnail = document.getElementById("video-thumbnail");
     const myVideo = document.getElementById("my-video");
@@ -13,18 +13,31 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Download form handling
+    // ================== Reload Page Handling ==================
+    document.querySelectorAll(".downloadBtn").forEach(function (button) {
+        button.addEventListener("click", function () {
+            setTimeout(function () {
+                window.location.reload();
+            }, 2000); // 2 second delay
+        });
+    });
+
+    // ================== Download Form Handling ==================
     const downloadForm = document.getElementById("downloadForm");
     if (downloadForm) {
         downloadForm.addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent default form submission
             downloadForm.classList.add("downloading");
+
+            // Simulate file download
             setTimeout(function () {
+                window.location.href = "your-brochure.pdf"; // Replace with actual file URL
                 window.location.reload();
-            }, 5000);
+            }, 3000);
         });
     }
 
-    // Stat number animation
+    // ================== Stat Number Animation ==================
     const statNumbers = document.querySelectorAll(".stat-number");
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -65,4 +78,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 : Math.floor(count);
         }, 20);
     }
+
+    // ================== Lazy Load Google Map ==================
+    function loadGoogleMap() {
+        let mapFrame = document.getElementById("google-map");
+        let placeholder = document.getElementById("map-placeholder");
+
+        if (!mapFrame || !placeholder) return; // Exit if elements are not found
+
+        let rect = placeholder.getBoundingClientRect();
+        let windowHeight = window.innerHeight;
+
+        if (rect.top < windowHeight) {
+            mapFrame.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.3579407107436!2d73.66382957595603!3d18.557894682542955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb580826e04f%3A0x8216f59d75fd3b3c!2sPrabha%20Engineering%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1739443986651!5m2!1sen!2sin";
+            mapFrame.style.display = "block";
+            placeholder.style.display = "none";
+            
+            window.removeEventListener("scroll", loadGoogleMap);
+        }
+    }
+
+    window.addEventListener("scroll", loadGoogleMap);
 });

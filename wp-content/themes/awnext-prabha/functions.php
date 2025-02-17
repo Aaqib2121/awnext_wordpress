@@ -13,6 +13,11 @@ function handle_form_submission() {
         global $wpdb;
         $table_name = $wpdb->prefix . 'custom_form_data';
 
+        // Check nonce for security
+        if (!isset($_POST['form_nonce']) || !wp_verify_nonce($_POST['form_nonce'], 'form_submission_nonce')) {
+            wp_die('Security check failed!');
+        }
+
         // Sanitize and validate form data
         $full_name = sanitize_text_field($_POST['full_name']);
         $email = sanitize_email($_POST['email']);
@@ -31,7 +36,7 @@ function handle_form_submission() {
         // Set session for download
         $_SESSION['download_ready'] = true;
 
-        // Redirect to the same page (important for refresh)
+        // Redirect to remove form data from the page
         wp_redirect($_SERVER['REQUEST_URI']);
         exit;
     }
@@ -43,7 +48,7 @@ function handle_file_download() {
     if (isset($_SESSION['download_ready']) && $_SESSION['download_ready']) {
         unset($_SESSION['download_ready']); // Remove session flag
 
-        $file_path = get_template_directory() . '/img/My-Brochure.pdf';
+        $file_path = get_template_directory() . '/img/Brochure Awning.pdf';
 
         if (file_exists($file_path)) {
             header('Content-Description: File Transfer');
