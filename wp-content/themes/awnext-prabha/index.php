@@ -12,14 +12,6 @@
 
 <body>
 
-    <!-- Overlay for the background blur -->
-    <div class="overlay" id="overlay">
-        <!-- Thank you modal -->
-        <div class="thank-you-modal">
-            <button class="close-btn" id="closePopup">&times;</button>
-            <p class="text-center">Thank You for Downloading!</p>
-        </div>
-    </div>
 
     <header class="fixed-top">
         <nav class="navbar navbar-expand-lg navbar-dark gradient-primary">
@@ -80,8 +72,8 @@
                     <div class="col-lg-6">
                         <div class="banner-form mx-auto">
                             <div class="form-card bg-white">
-                                <h2 class="mb-3 text-dark">Upgrade to Smart Awning Solutions</h2>
-                                <h4 class="mb-4 text-dark">Smart, smooth, and silent—experience Awnext today!</h4>
+                                <h2 class="mb-3 hero_h2 text-dark">Upgrade to Smart Awning Solutions</h2>
+                                <h5 class="mb-4 hero_h4 text-dark">Smart, smooth, and silent—experience Awnext today!</h5>
                                 <form method="post" action="">
                                     <?php wp_nonce_field('form_submission_nonce', 'form_nonce'); ?>
                                     <div class="mb-3">
@@ -106,33 +98,34 @@
         </section>
     </main>
 
-    <!-- Content Section -->
-    <section class="content-section py-5" id="about">
-        <div class="container">
-            <div class="row align-items-center content_mobile">
-                <!-- Left Side: Text Content -->
-                <div class="col-md-6 content-text">
-                    <h2 class="content_head">Motorised Awnings built to last</h2>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/content_img.jpeg"
-                        class="content_img mobile-only" alt="Right Side Image">
-                    <p>Awnext by Prabha redefines outdoor luxury as the first organized player in motorized awnings with
-                        nationwide distribution. Precision-engineered for durability, style, and effortless protection
-                        against harsh weather.</p>
-                </div>
-                <!-- Right Side: Image -->
-                <div class="col-md-6 content-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/content_img.jpeg"
-                        class="content_img desktop-only" alt="Right Side Image">
-                </div>
+
+    <!-- /* Content Section */ -->
+<section class="content-section" id="about">
+    <div class="container desktop-cont">
+        <div class="row align-items-center content_mobile">
+            <!-- Left Side: Text Content -->
+            <div class="col-lg-6 content-text">
+                <h2 class="content_head">Motorised Awnings<br> built to last</h2>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/content_img.jpeg"
+                    class="content_img mobile-only" width="100%" alt="Right Side Image">
+                <p>Awnext by Prabha redefines outdoor luxury as the first organized player in motorized awnings with
+                    nationwide distribution. Precision-engineered for durability, style, and effortless protection
+                    against harsh weather.</p>
+            </div>
+            <!-- Right Side: Image -->
+            <div class="col-lg-6 content-image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/content_img.jpeg"
+                    class="content_img desktop-only" alt="Right Side Image">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
     <!-- Features Section -->
-    <section class="features py-5" id="why">
+    <section class="features " id="why">
         <div class="container">
-            <h2 class="features_head text-left mb-5">Why Awnext by Prabha?</h2>
+            <h2 class="features_head text-left mb-5 text-dark">Why Awnext by Prabha?</h2>
             <div class="row flex-nowrap overflow-auto g-4 pb-3 scrollable-row"> <!-- Added scrollable-row class -->
                 <!-- Feature Cards -->
                 <div class="col-12 col-sm-6 col-xl-3 flex-shrink-0">
@@ -244,7 +237,7 @@
     <section class="stats py-5" id="advantage">
         <div class="container">
             <h2 class="stats_head text-left">The Prabha Advantage</h2>
-            <p class="lead mb-5 pt-4 text-left">Partnering with Prabha Engineering means decades of innovation,
+            <p class="lead mb-5 pt-4 stats_p text-left">Partnering with Prabha Engineering means decades of innovation,
                 reliability, and a
                 trusted ally for your success.</p>
 
@@ -254,9 +247,8 @@
                 <div class="col-md-3 col-6 stat-box">
                     <div class="stat-item">
                         <div class="stat-number" data-target="400+">0</div>
-                        <div class="stat-line"></div>
                         <div class="stat-label">
-                            <h5>Lifetime Customers</h5>
+                            <h5 class="stats_h5">Lifetime Customers</h5>
                         </div>
                     </div>
                 </div>
@@ -264,9 +256,8 @@
                 <div class="col-md-3 col-6 stat-box">
                     <div class="stat-item">
                         <div class="stat-number" data-target="60+">0</div>
-                        <div class="stat-line"></div>
                         <div class="stat-label">
-                            <h5>Years of experience<br>in innovations</h5>
+                            <h5 class="stats_h5">Years of experience<br>in innovations</h5>
                         </div>
                     </div>
                 </div>
@@ -274,7 +265,6 @@
                 <div class="col-md-3 col-6 stat-box">
                     <div class="stat-item">
                         <div class="stat-number" data-target="200+">0</div>
-                        <div class="stat-line"></div>
                         <div class="stat-label">
                             <h5>Product Portfolio</h5>
                         </div>
@@ -284,9 +274,8 @@
                 <div class="col-md-3 col-6 stat-box">
                     <div class="stat-item">
                         <div class="stat-number" data-target="87%">0</div>
-                        <div class="stat-line"></div>
                         <div class="stat-label">
-                            <h5>Client Retention<br>Rate</h5>
+                            <h5 class="stats_h5">Client Retention<br>Rate</h5>
                         </div>
                     </div>
                 </div>
@@ -300,12 +289,12 @@
         <div class="container h-100">
             <div class="row align-items-center h-100">
                 <div class="col-lg-6 col-md-12  text-lg-start mb-lg-0">
-                    <h2 class="text-white fw-bold display-5 mb-4 text-left">Download our brochure <br> to get more insights</h2>
+                    <h2 class="text-white display-5 mb-4 text-left download_text">Download our  <br> brochure to get <br>more insights</h2>
                 </div>
                 <div class="col-lg-6">
-                    <div class="banner-form mx-auto">
+                    <div class="banner-form download-form mx-auto">
                         <div class="form-card bg-white">
-                            <h2 class="mb-3 text-white">Download our brochure</h2>
+                            <h2 class="mb-3 text-dark">Download our brochure</h2>
                             <form method="post" action="">
                                 <?php wp_nonce_field('form_submission_nonce', 'form_nonce'); ?>
                                 <div class="mb-3">
@@ -331,8 +320,8 @@
     <!-- Contact Section -->
     <section class="contact py-5 gradient-blue text-white" id="get_contact">
         <div class="container">
-            <h2 class="text-center mb-3 pt-3 contact_head fw-bold">Get in touch with us!</h2>
-            <h4 class="text-center contact_h4 text-white ">We should start the conversation</h4>
+            <h2 class="text-center mb-3 pt-3 contact_head">Get in touch with us!</h2>
+            <h4 class="text-center contact_h4 ">We should start the conversation</h4>
 
             <div class="text-center mb-5">
                 <a href="tel:9226566851" class="btn btn-lg call-btn">Book a call with us!</a>
