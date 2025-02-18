@@ -100,27 +100,26 @@
 
 
     <!-- /* Content Section */ -->
-<section class="content-section" id="about">
-    <div class="container desktop-cont">
-        <div class="row align-items-center content_mobile">
-            <!-- Left Side: Text Content -->
-            <div class="col-lg-6 content-text">
-                <h2 class="content_head">Motorised Awnings<br> built to last</h2>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/content_img.jpeg"
-                    class="content_img mobile-only" width="100%" alt="Right Side Image">
-                <p>Awnext by Prabha redefines outdoor luxury as the first organized player in motorized awnings with
-                    nationwide distribution. Precision-engineered for durability, style, and effortless protection
-                    against harsh weather.</p>
-            </div>
-            <!-- Right Side: Image -->
-            <div class="col-lg-6 content-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/content_img.jpeg"
-                    class="content_img desktop-only" alt="Right Side Image">
+    <section class="content-section" id="about">
+        <div class="container desktop-cont">
+            <div class="row align-items-center content_mobile">
+                <!-- Left Side: Text Content -->
+                <div class="col-lg-6 content-text">
+                    <h2 class="content_head">Motorised Awnings<br> built to last</h2>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/content_img.jpeg"
+                        class="content_img mobile-only" width="100%" alt="Right Side Image">
+                    <p>Awnext by Prabha redefines outdoor luxury as the first organized player in motorized awnings with
+                        nationwide distribution. Precision-engineered for durability, style, and effortless protection
+                        against harsh weather.</p>
+                </div>
+                <!-- Right Side: Image -->
+                <div class="col-lg-6 content-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/content_img.jpeg"
+                        class="content_img desktop-only" alt="Right Side Image">
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
 
     <!-- Features Section -->
     <section class="features " id="why">
@@ -154,7 +153,6 @@
                                 <ul>
                                     <li>Smart remote-controlled operation</li>
                                     <li>UV-resistant, weatherproof fabrics</li>
-                                    <li>5-year warranty on motors and frames</li>
                                 </ul>
                             </div>
                         </div>
