@@ -122,9 +122,9 @@
     </section>
 
     <!-- Features Section -->
-    <section class="features " id="why">
+    <section class="features" id="why">
         <div class="container">
-            <h2 class="features_head text-left mb-5 text-dark">Why Awnext by Prabha?</h2>
+            <h2 class="features_head text-left pb-5 pt-4 text-dark">Why Awnext by Prabha?</h2>
             <div class="row flex-nowrap overflow-auto g-4 pb-3 scrollable-row"> <!-- Added scrollable-row class -->
                 <!-- Feature Cards -->
                 <div class="col-12 col-sm-6 col-xl-3 flex-shrink-0">
@@ -319,7 +319,7 @@
     <!-- Contact Section -->
     <section class="contact py-5 gradient-blue text-white" id="get_contact">
         <div class="container">
-            <h2 class="text-center mb-3 pt-3 contact_head">Get in touch with us!</h2>
+            <h2 class="text-center mb-3  contact_head">Get in touch with us!</h2>
             <h4 class="text-center contact_h4 ">We should start the conversation</h4>
 
             <div class="text-center mb-5">
