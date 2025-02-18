@@ -100,3 +100,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", loadGoogleMap);
 });
+
+
+document.getElementById('play-button').addEventListener('click', function () {
+    var video = document.getElementById('my-video');
+    var thumbnail = document.getElementById('video-thumbnail');
+    video.style.display = 'block'; // Show the video
+    thumbnail.style.display = 'none'; // Hide the thumbnail
+    video.play(); // Start playing the video
+});

@@ -209,12 +209,12 @@
         </div>
     </section>
 
-    <section class="why-awnext py-5 bg-light">
-        <div class="container text-center">
+    <section class="why-awnext">
+        <div class="container awnext_video mt-4">
             <!-- Video Thumbnail -->
-            <div class="video-container" style="position: relative; display: inline-block;">
+            <div class="video-container col-md-12">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/video.jpeg" alt="Video Thumbnail"
-                    id="video-thumbnail" style="cursor: pointer; width: 100%; max-width: 800px;">
+                    id="video-thumbnail" style="cursor: pointer;">
 
                 <!-- Play Button (Over Thumbnail) -->
                 <div id="play-button" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
@@ -223,13 +223,14 @@
                 </div>
 
                 <!-- Hidden Video -->
-                <video id="my-video" controls style="display: none; width: 100%; max-width: 800px;">
+                <video id="my-video" controls style="display: none; ">
                     <source src="<?php echo get_template_directory_uri(); ?>/img/Awaning_main_video_v03.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
         </div>
     </section>
+
 
     <!-- Stats Section -->
     <section class="stats py-5" id="advantage">
