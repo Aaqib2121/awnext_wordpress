@@ -319,7 +319,7 @@
     <!-- Contact Section -->
     <section class="contact py-5 gradient-blue text-white" id="get_contact">
         <div class="container">
-            <h2 class="text-center mb-3  contact_head">Get in touch with us!</h2>
+            <h2 class="text-center mb-3 contact_head">Get in touch with us!</h2>
             <h4 class="text-center contact_h4 ">We should start the conversation</h4>
 
             <div class="text-center mb-5">
