@@ -45,14 +45,6 @@ body {
 }
 
 
-/* For responsive behavior */
-@media (max-width: 600px) {
-    .thank-you-modal {
-        font-size: 16px;
-        padding: 15px;
-    }
-}
-
 /* Navbar */
 .navbar {
     top: 1.8rem;
@@ -167,18 +159,8 @@ body {
         background: linear-gradient(90deg, #0081ff 0, rgba(19, 19, 67, 0.58) 45.5%, #0081ff 98.8%);
     }
 
-    .hero {
-        height: auto;
-        min-height: 100vh;
-        padding: 6rem 0;
-    }
-
-    .hero_head {
-        font-size: 2rem;
-    }
-
     .hero_h1 {
-        padding-top: 0;
+        /* padding-top: 0; */
         font-size: 2rem;
         margin-bottom: 2rem;
     }
@@ -191,6 +173,7 @@ body {
 
     .form-card {
         margin-top: 0;
+        padding: 2rem;
         background: linear-gradient(156.39deg, #2EA1FD -8.77%, rgba(218, 240, 255, 0.95) 53.46%, #2EA1FD 108.38%);
     }
 }
@@ -200,27 +183,48 @@ body {
         font-size: 1.2rem;
     }
 
+    .hero {
+        height: auto;
+        max-height: 85vh;
+        /* padding: 2rem 0; */
+    }
+
+    .hero_head {
+        font-size: 2rem;
+        top: 7em;
+        text-align: left;
+    }
+
     .logo-bottom {
         font-size: .7rem;
     }
 
-    .hero_head {
-        font-size: 1.5rem;
-        text-align: left;
-    }
 
     .form-card {
-        padding: 1.5rem;
+        padding: 2rem;
     }
 
     .banner-form {
         transform: translateY(20%);
+        text-align: left;
+        justify-content: left;
     }
 }
 
 @media(max-width:576px) {
     .navbar {
         padding: .5rem;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 70vh;
+        /* padding: 5rem 0; */
+    }
+
+    .hero_head {
+        font-size: 2rem;
+        top: 6em;
     }
 
     .logo-text {
@@ -247,7 +251,7 @@ body {
     }
 
     .form-card {
-        padding: 1.25rem;
+        padding: 2rem;
     }
 
     .logo img {
@@ -256,9 +260,6 @@ body {
 }
 
 /* Content Section Styles */
-/* .content-section {
-    padding: 60px 0;
-} */
 
 /* General Layout */
 .desktop-cont {
@@ -329,6 +330,10 @@ body {
 
 /* For screens up to 992px (tablets and smaller) */
 @media (max-width: 992px) {
+    /* .content-section {
+        padding-top: 14em;
+    } */
+
     .desktop-only {
         display: none;
     }
@@ -375,6 +380,10 @@ body {
 
 /* For screens up to 768px (phones and smaller tablets) */
 @media (max-width: 768px) {
+    /* .content-section {
+        padding-top: 14em;
+    } */
+
     .content_head {
         font-size: 28px;
         font-weight: 400;
@@ -402,20 +411,22 @@ body {
     }
 }
 
-/* For screens up to 576px (smaller phones) */
+/* For screens up to 576px (mobile devices) */
 @media (max-width: 576px) {
+    .content-section {
+        padding-top: 30vh;
+    }
+
     .content_head {
         font-size: 28px;
         font-weight: 400;
         line-height: 36px;
-        letter-spacing: 0%;
     }
 
     .content-text p {
         font-weight: 300;
         font-size: 22px;
         line-height: 22px;
-        letter-spacing: 0%;
     }
 
     .desktop-only {
@@ -426,9 +437,9 @@ body {
         display: block;
         height: auto;
         max-height: 50vh;
-        /* Ensure mobile image scales nicely */
     }
 }
+
 
 
 .features {
