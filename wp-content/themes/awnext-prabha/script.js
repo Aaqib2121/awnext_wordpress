@@ -13,13 +13,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ================== Reload Page Handling ==================
+    // ================== Download Button and Modal ==================
     document.querySelectorAll(".downloadBtn").forEach(function (button) {
         button.addEventListener("click", function () {
+            // Show the overlay and modal
+            const overlay = document.getElementById("overlay");
+            overlay.style.display = "flex";
+
+            // Hide the modal and overlay after 3 seconds, then reload the page
             setTimeout(function () {
-                window.location.reload();
-            }, 2000); // 2 second delay
+                overlay.style.display = "none";
+                location.reload(); // Reload the page after 3 seconds
+            }, 3000); // 3 seconds delay
         });
+    });
+
+    // ================== Close Modal ==================
+    document.getElementById("closePopup").addEventListener("click", function () {
+        document.getElementById("overlay").style.display = "none";
     });
 
     // ================== Download Form Handling ==================

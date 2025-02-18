@@ -67,6 +67,64 @@ p {
     background: var(--gradient-blue)
 }
 
+/* Thank You styling (background blur) */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal styling */
+.thank-you-modal {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    position: relative;
+    text-align: center;
+}
+
+.close-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+/* Button container styling */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* For responsive behavior */
+@media (max-width: 600px) {
+    .thank-you-modal {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+
+/* Navbar */
+
 .navbar {
     top: 1.8rem;
     padding: 1rem 3rem;
@@ -98,6 +156,11 @@ p {
     margin-top: -.5rem
 }
 
+.btn-outline-light {
+    color: white;
+    border-radius: inherit;
+}
+
 .hero {
     height: 100vh;
     background: url("img/banner_img.jpeg") center center/cover no-repeat;
@@ -106,7 +169,11 @@ p {
 }
 
 .hero_h1 {
-    font-size: 3.2rem
+    padding-top: 8em;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 52px;
+    letter-spacing: 0%;
 }
 
 .hero::before {
@@ -132,12 +199,18 @@ p {
 }
 
 .form-card {
-    background: linear-gradient(156.39deg, #2ea1fd -8.77%, rgba(218, 240, 255, 0) 53.46%, #2ea1fd 108.38%);
+    /* background: linear-gradient(156.39deg, #2ea1fd -8.77%, rgba(218, 240, 255, 0) 53.46%, #2ea1fd 108.38%); */
+    background: linear-gradient(156.39deg, #2EA1FD -8.77%, rgba(218, 240, 255, 0) 53.46%, #2EA1FD 108.38%);
     padding: 2rem;
-    border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
     margin-top: 4rem
+}
+
+.form-control {
+    background: transparent;
+    border-radius: inherit;
+    border: 0.69px solid rgba(0, 129, 255, 1);
 }
 
 @media(max-width:992px) {
@@ -204,13 +277,20 @@ p {
         font-size: .6rem
     }
 
+    .hero_h1{
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 36px;
+        letter-spacing: 0%;
+    }
+    
     .hero_head {
-        font-size: 1.2rem;
         padding-top: 4rem
+
     }
 
     .form-card {
-        padding: .5rem
+        padding: 1.5rem
     }
 
     .logo img {
@@ -629,14 +709,6 @@ p {
     margin-bottom: 1.5rem
 }
 
-.btn-primary {
-    background: var(--gradient-primary);
-    border: 0;
-    padding: 1.6rem 2rem;
-    width: 70%;
-    font-size: 1rem;
-    font-weight: 600
-}
 
 .button-container {
     display: flex;
@@ -719,13 +791,14 @@ p {
 
 .btn-primary {
     background: linear-gradient(116.01deg, #0081ff -1.98%, #0272e6 .58%, #065cc0 5.72%, #09489e 11.7%, #0c3781 17.69%, #0e2a6a 24.53%, #101f58 32.23%, #12184c 41.64%, #121445 54.47%, #131343 83.55%);
-    border: 0;
+    border: inherit;
     padding: .75rem 2rem;
     font-size: 1rem;
     font-weight: 600;
     color: #fff;
     width: 50%;
-    max-width: 300px
+    max-width: 300px;
+    border-radius: inherit;
 }
 
 .call-btn {
